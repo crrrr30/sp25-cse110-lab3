@@ -6,6 +6,7 @@
       name="description"
       content="Meeting Minutes 4/9—Pomodoro Timer First Brainstorm"
     />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <meta name="author" content="Jonathan Cui" />
     <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
 
@@ -18,14 +19,14 @@
     <title>Meeting Minutes 4/9</title>
   </head>
   <body>
-    <nav>
-      <a href="/">Home Page</a>
-    </nav>
-
     <img
       class="background-image"
       src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     />
+
+    <nav>
+      <a href="/">Home Page</a>
+    </nav>
 
     <div class="content-container">
       <main>
@@ -178,7 +179,7 @@
               </datalist>
               <br /><br />
 
-              <label>Gender:</label><br />
+              <label>Gender:</label><br style="margin-bottom: 4px" />
               <input type="radio" id="male" name="gender" value="male" />
               <label for="male">Male</label><br />
               <input type="radio" id="female" name="gender" value="female" />
@@ -200,8 +201,9 @@
               </select>
               <br /><br />
 
-              <label for="comment">Comment:</label><br />
-              <textarea cols="64" id="comment" name="comment"></textarea>
+              <label for="comment">Comment:</label
+              ><br style="margin-bottom: 4px" />
+              <textarea cols="32" id="comment" name="comment"></textarea>
               <br /><br />
 
               <label for="cb"
