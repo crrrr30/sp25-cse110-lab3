@@ -128,6 +128,7 @@ legend {
 
 button,
 input[type="submit"] {
+  font-size: small;
   cursor: pointer;
   padding: 8px 24px;
 
@@ -162,6 +163,7 @@ select {
   outline: none;
   padding: 4px;
   margin: 0 12px;
+  min-width: 64px;
 
   background: linear-gradient(to right, gray, gray);
   background-size: 100% 1px;
