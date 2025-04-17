@@ -1,0 +1,183 @@
+/* fonts */
+:root {
+  font-family: "Inter";
+  /* cv02: open four */
+  /* cv03: open six */
+  /* cv04: open nine */
+  /* cv11: single-storey `a` */
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-variation-settings: "opsz" 24;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    /* variable font for supported browsers */
+    font-family: "InterVariable", sans-serif;
+  }
+}
+
+/* layout setup */
+body {
+  position: relative;
+  margin: 0;
+  width: 100dvw;
+  height: calc(100dvh);
+  overflow: hidden;
+}
+
+.content-container {
+  width: 100%;
+  height: calc(100dvh - 4rem);
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: -1;
+  object-fit: cover;
+}
+
+nav {
+  width: 100vw;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #4b84f3;
+  backdrop-filter: blur(24px);
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0 36px;
+}
+
+/* custom link */
+nav a {
+  color: black;
+  text-decoration: none;
+  background: linear-gradient(to right, black, black);
+  background-size: 100% 1px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+/* custom link */
+nav a:hover,
+nav a:focus {
+  background-size: 0 1px;
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 240px;
+  max-width: 768px;
+
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(24px);
+  padding: 48px;
+}
+
+/* content styling */
+hr {
+  margin-top: 24px;
+  margin-bottom: 48px;
+  border: 0.5px solid gray;
+}
+
+header {
+  text-align: right;
+  padding-right: 24px;
+  border-right: 1px solid black;
+  margin-bottom: 48px;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* forms and fields */
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* buttons */
+button,
+input[type="submit"] {
+  font-size: small;
+  cursor: pointer;
+  padding: 8px 24px;
+
+  font-weight: 300;
+  border: none;
+  border-radius: 8px;
+
+  transition: opacity 150ms ease-in-out;
+  opacity: 1;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.red-button {
+  background-color: #e8232d;
+  color: white;
+}
+
+.yellow-button {
+  background-color: #ffdd00;
+  color: black;
+}
+
+/* text-like inputs */
+input[type="text"],
+input[type="date"],
+select {
+  font-size: medium;
+  border: none;
+  outline: none;
+  padding: 4px;
+  margin: 0 12px;
+  min-width: 64px;
+
+  background: linear-gradient(to right, gray, gray);
+  background-size: 100% 1px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  transition: all 150ms;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  background: linear-gradient(to right, black, black);
+  background-size: 100% 1.5px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+textarea {
+  border: 1px solid gray;
+  border-radius: 8px;
+  background: none;
+  padding: 8px;
+  outline: none;
+  transition: border-color 150ms;
+}
+
+textarea:focus {
+  border: 1px solid black;
+}
