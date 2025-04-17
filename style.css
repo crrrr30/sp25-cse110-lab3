@@ -1,6 +1,5 @@
 /* fonts */
 :root {
-  overflow: hidden;
   font-family: "Inter";
   /* cv02: open four */
   /* cv03: open six */
@@ -19,24 +18,27 @@
 
 body {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: none;
   margin: 0;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 .content-container {
   position: absolute;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 .background-image {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  object-fit: cover;
   top: 0;
   left: 0;
 }
@@ -49,7 +51,7 @@ video {
 nav {
   position: absolute;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
 
