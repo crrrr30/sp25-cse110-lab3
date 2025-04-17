@@ -20,20 +20,21 @@ jobs:
           set -e
           fail=0
           for file in $(find . -name '*.html'); do
-            echo "Validating $file..."
+            echo "🔍 Validating $file..."
             result=$(curl -s -H "Content-Type: text/html; charset=utf-8" --data-binary "@$file" "https://validator.w3.org/nu/?out=gnu")
-            if [ -n "$result" ]; then
-              echo "::error file=$file::Validation errors found:"
+
+            echo "$result" | grep -i '^error:' && {
+              echo "::error file=$file::Validation errors found"
               echo "$result"
               fail=1
-            else
-              echo "✔️ $file is valid."
-            fi
+            } || {
+              echo "✅ $file passed with no errors"
+            }
           done
 
           if [ $fail -ne 0 ]; then
-            echo "❌ HTML validation failed."
+            echo "❌ HTML validation failed"
             exit 1
           else
-            echo "✅ All HTML files passed validation."
+            echo "🎉 All HTML files passed validation"
           fi
