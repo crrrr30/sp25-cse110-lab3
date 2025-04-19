@@ -1,5 +1,5 @@
-/* fonts */
 :root {
+  /* fonts */
   font-family: "Inter";
   /* cv02: open four */
   /* cv03: open six */
@@ -7,6 +7,10 @@
   /* cv11: single-storey `a` */
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   font-variation-settings: "opsz" 24;
+
+  --nav-border-color: color-mix(in oklab, #ff875b 40%, #0000ff 45%);
+
+  --main-blur-radius: 48px;
 }
 
 @supports (font-variation-settings: normal) {
@@ -48,9 +52,10 @@ nav {
   height: 4rem;
 
   display: flex;
+  gap: 24px;
   align-items: center;
-  border-bottom: 1px solid color-mix(in oklab, #ff875b 40%, #0000ff 45%);
-  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--nav-border-color);
+  backdrop-filter: blur(18px);
   background-color: rgba(255, 255, 255, 0.25);
   padding: 0 36px;
 }
@@ -83,7 +88,7 @@ main {
   max-width: 768px;
 
   background-color: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(48px);
+  backdrop-filter: blur(var(--main-blur-radius));
   padding: 48px;
 }
 
