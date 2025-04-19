@@ -23,7 +23,7 @@ jobs:
             echo "🔍 Validating $file..."
             result=$(curl -s -H "Content-Type: text/html; charset=utf-8" --data-binary "@$file" "https://validator.w3.org/nu/?out=gnu")
 
-            echo "$result" | grep -i '^error:' && {
+            echo "$result" | grep -i 'error:' && {
               echo "::error file=$file::Validation errors found"
               echo "$result"
               fail=1
