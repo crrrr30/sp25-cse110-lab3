@@ -21,7 +21,7 @@ body {
   position: relative;
   margin: 0;
   width: 100dvw;
-  height: calc(100dvh);
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -72,13 +72,18 @@ nav a:focus {
   background-size: 0 1px;
 }
 
+.hide-me {
+  display: none;
+}
+
 main {
+  display: block;
   margin: 0 auto;
   margin-top: 240px;
   max-width: 768px;
 
   background-color: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(48px);
   padding: 48px;
 }
 
@@ -86,7 +91,10 @@ main {
 hr {
   margin-top: 24px;
   margin-bottom: 48px;
-  border: 0.5px solid gray;
+  /* border: 0.5px solid gray; */
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: gray;
 }
 
 header {
@@ -116,6 +124,8 @@ legend {
 /* buttons */
 button,
 input[type="submit"] {
+  min-width: 1px;
+  /*  */
   font-size: small;
   cursor: pointer;
   padding: 8px 24px;
@@ -124,13 +134,18 @@ input[type="submit"] {
   border: none;
   border-radius: 8px;
 
-  transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out, transform 100ms;
   opacity: 1;
 }
 
 button:hover,
 input[type="submit"]:hover {
   opacity: 0.75;
+}
+
+button:active,
+input[type="submit"]:active {
+  transform: translate(1px, 1px);
 }
 
 .red-button {
