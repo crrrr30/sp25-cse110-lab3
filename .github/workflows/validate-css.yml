@@ -1,0 +1,40 @@
+name: Validate CSS
+
+on:
+  push:
+    paths:
+      - '**.css'
+  pull_request:
+    paths:
+      - '**.css'
+
+jobs:
+  css-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Find and validate all CSS files
+        run: |
+          set -e
+          fail=0
+          for file in $(find . -name '*.css'); do
+            echo "🔍 Validating $file..."
+            result=$(curl -s -H "Content-Type: text/css; charset=utf-8" --data-binary "@$file" "https://validator.w3.org/nu/?out=gnu")
+
+            echo "$result" | grep -i 'error:' && {
+              echo "::error file=$file::Validation errors found"
+              echo "$result"
+              fail=1
+            } || {
+              echo "✅ $file passed with no errors"
+            }
+          done
+
+          if [ $fail -ne 0 ]; then
+            echo "❌ CSS validation failed"
+            exit 1
+          else
+            echo "🎉 All CSS files passed validation"
+          fi
