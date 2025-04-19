@@ -26,7 +26,9 @@
     />
 
     <nav>
-      <a href="/">Home Page</a>
+      <a href="/">Home</a>
+      <a href="/">Another Page</a>
+      <a href="/">Also a Page</a>
     </nav>
 
     <div class="content-container">
@@ -167,56 +169,89 @@
             <fieldset>
               <legend>Add A Comment</legend>
 
-              <label for="name">Name:</label>
-              <input type="text" list="names" id="name" name="name" />
+              <div class="form-fields">
+                <span class="labeled-form-input">
+                  <label for="name">Name:</label>
+                  <input type="text" list="names" id="name" name="name" />
 
-              <datalist id="names">
-                <option value="Alice"></option>
-                <option value="Bob"></option>
-                <option value="Candice"></option>
-                <option value="Debby"></option>
-                <option value="Elijah"></option>
-                <option value="Greg"></option>
-              </datalist>
-              <br /><br />
+                  <datalist id="names">
+                    <option value="Alice"></option>
+                    <option value="Bob"></option>
+                    <option value="Candice"></option>
+                    <option value="Debby"></option>
+                    <option value="Elijah"></option>
+                    <option value="Greg"></option>
+                  </datalist>
+                </span>
 
-              <label>Gender:</label><br />
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">Male</label><br />
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female">Female</label><br />
-              <input type="radio" id="other" name="gender" value="other" />
-              <label for="other">Other</label>
-              <br /><br />
+                <span class="labeled-form-input">
+                  <label>Gender:</label>
+                  <span id="radio-row">
+                    <span>
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                      />
+                      <label for="male">Male</label>
+                    </span>
+                    <span>
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                      />
+                      <label for="female">Female</label>
+                    </span>
+                    <span>
+                      <input
+                        type="radio"
+                        id="other"
+                        name="gender"
+                        value="other"
+                      />
+                      <label for="other">Other</label>
+                    </span>
+                  </span>
+                </span>
 
-              <label for="birthday">Birthday:</label>
-              <input type="date" id="birthday" name="birthday" />
-              <br /><br />
+                <span class="labeled-form-input">
+                  <label for="birthday">Birthday:</label>
+                  <input type="date" id="birthday" name="birthday" />
+                </span>
 
-              <label for="department">Department:</label>
-              <select name="department" id="department">
-                <option value="Engineering">Engineering</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Legal">Legal</option>
-                <option value="HR">HR</option>
-              </select>
-              <br /><br />
+                <span class="labeled-form-input">
+                  <label for="department">Department:</label>
+                  <select name="department" id="department">
+                    <option value="Engineering">Engineering</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Legal">Legal</option>
+                    <option value="HR">HR</option>
+                  </select>
+                </span>
 
-              <label for="comment">Comment:</label><br />
-              <textarea cols="32" id="comment" name="comment"></textarea>
-              <br /><br />
+                <span class="labeled-form-input-vertical" id="form-comment">
+                  <label for="comment">Comment:</label>
+                  <textarea cols="32" id="comment" name="comment"></textarea>
+                </span>
 
-              <label for="cb">
-                I agree to be contacted at my email regarding my comment.
-              </label>
-              <input type="checkbox" id="cb" name="cb" />
-              <br /><br />
+                <span class="labeled-form-input" id="form-consent">
+                  <input type="checkbox" id="cb" name="cb" />
+                  <label for="cb">
+                    I agree to be contacted at my email regarding my comment.
+                  </label>
+                </span>
+              </div>
 
-              <input
-                type="submit"
-                style="background-color: hsl(0, 0, 0); color: white"
-                value="Submit"
-              />
+              <div style="padding-top: 24px">
+                <input
+                  type="submit"
+                  style="background-color: hsl(0, 0%, 0%); color: white"
+                  value="Submit"
+                />
+              </div>
             </fieldset>
           </form>
         </footer>
