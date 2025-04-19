@@ -118,6 +118,9 @@ video {
 
 /* forms and fields */
 fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   padding: 0;
   border: 0;
 }
@@ -165,6 +168,35 @@ input[type="submit"]:active {
   color: black;
 }
 
+.form-fields {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.labeled-form-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.labeled-form-input-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#radio-row {
+  display: flex;
+  gap: 0px;
+}
+
+#form-consent {
+  align-items: start;
+}
+
 /* text-like inputs */
 input[type="text"],
 input[type="date"],
@@ -173,7 +205,6 @@ select {
   border: none;
   outline: none;
   padding: 4px;
-  margin: 0 12px;
   min-width: 64px;
 
   background: linear-gradient(to right, gray, gray);
@@ -202,4 +233,30 @@ textarea {
 
 textarea:focus {
   border: 1px solid black;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    gap: 48px;
+  }
+
+  .form-fields {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  #form-comment {
+    grid-column: 1 / 3;
+  }
+
+  #form-consent {
+    grid-column: 1 / 3;
+  }
+
+  #radio-row {
+    display: flex;
+    gap: 12px;
+  }
 }
