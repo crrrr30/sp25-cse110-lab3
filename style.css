@@ -149,7 +149,7 @@ input[type="submit"]:active {
 }
 
 .red-button {
-  background-color: #e8232d;
+  background-color: color(from hsl(0 50% 50%) srgb 1 g b);
   color: white;
 }
 
