@@ -1,5 +1,5 @@
-* {
-  display: block;
+*.nothing {
+  display: none;
 }
 
 :root {
@@ -80,10 +80,6 @@ nav > a {
   &:focus {
     background-size: 0pt 1px;
   }
-}
-
-.hide-me {
-  display: none;
 }
 
 main {
@@ -246,10 +242,7 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
   }
 
-  #form-comment {
-    grid-column: 1 / 3;
-  }
-
+  #form-comment,
   #form-consent {
     grid-column: 1 / 3;
   }
