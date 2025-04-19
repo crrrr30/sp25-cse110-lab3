@@ -71,12 +71,11 @@ nav > a {
   background-position: 100% 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
-}
 
-/* custom link */
-nav > a:hover,
-nav > a:focus {
-  background-size: 0 1px;
+  &:hover,
+  &:focus {
+    background-size: 0 1px;
+  }
 }
 
 .hide-me {
@@ -98,7 +97,6 @@ main {
 hr {
   margin-top: 24px;
   margin-bottom: 48px;
-  /* border: 0.5px solid gray; */
   border-width: 0.5px;
   border-style: solid;
   border-color: gray;
