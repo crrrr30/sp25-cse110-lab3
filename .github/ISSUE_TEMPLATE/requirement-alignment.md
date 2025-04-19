@@ -2,7 +2,7 @@
 name: Requirement alignment
 about: Propose changes to comply with deliverable requirements
 title: ''
-labels: ''
+labels: requirement
 assignees: crrrr30
 
 ---
