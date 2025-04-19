@@ -56,10 +56,10 @@ nav {
   justify-content: left;
   align-items: center;
   gap: 24px;
-  border-bottom: 1px solid var(--nav-border-color);
+  border-bottom: 1px solid var(--nav-border-color, blue);
   backdrop-filter: blur(18px);
   background-color: rgba(255, 255, 255, 0.25);
-  padding: 0 36px;
+  padding: 0mm 36px;
 }
 
 /* custom link */
@@ -74,7 +74,7 @@ nav > a {
 
   &:hover,
   &:focus {
-    background-size: 0 1px;
+    background-size: 0pt 1px;
   }
 }
 
