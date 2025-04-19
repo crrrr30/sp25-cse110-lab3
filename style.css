@@ -85,9 +85,14 @@ nav > a {
 main {
   margin: 0 auto;
   margin-top: 240px;
+  margin-bottom: 120px;
   max-width: 768px;
 
-  background-color: rgba(255, 255, 255, 0.45);
+  border: 0.5px rgba(255, 255, 255, 0.5) solid;
+  filter: drop-shadow(-2mm -2mm 2mm rgba(0, 0, 0, 0.05));
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url("noise.svg");
   backdrop-filter: blur(var(--main-blur-radius));
   padding: 48px;
 }
