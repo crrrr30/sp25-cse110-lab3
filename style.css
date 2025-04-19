@@ -260,3 +260,11 @@ textarea:focus {
     gap: 12px;
   }
 }
+
+audio ~ details {
+  padding-top: 8px;
+}
+
+li:has(+ li:last-of-type) {
+  font-style: italic;
+}
