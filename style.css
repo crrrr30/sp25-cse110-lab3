@@ -1,3 +1,7 @@
+* {
+  display: block;
+}
+
 :root {
   /* fonts */
   font-family: "Inter";
@@ -83,7 +87,6 @@ nav > a {
 }
 
 main {
-  display: block;
   margin: 0 auto;
   margin-top: 240px;
   max-width: 768px;
