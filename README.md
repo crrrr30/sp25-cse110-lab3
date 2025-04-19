@@ -1,3 +1,3 @@
-# Lab 2 - Starter
+# Lab 3
 
-The website is live at [https://crrrr30.github.io/cse110-lab2](https://crrrr30.github.io/cse110-lab2).
+The website is live at [https://crrrr30.github.io/sp25-cse110-lab3](https://crrrr30.github.io/sp25-cse110-lab3).
